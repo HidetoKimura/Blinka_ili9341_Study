@@ -3,11 +3,17 @@
 - Orange Pi 5
 - Orangepi5_1.1.6_ubuntu_jammy_server_linux5.10.110
 
-# Setup
+# Setup spidev
+~~~
+orangepi@orangepi5:~$ vi /boot/orangepiEnv.txt
+overlays=spi4-m0-cs1-spidev
+~~~
+
+# Setup CircuitPython
 ~~~
 sudo apt-get update
 sudo apt-get install -y python3 git python3-pip
-sudo apt-get install libgpiod2 python3-libgpiod
+sudo apt-get install -y libgpiod2 python3-libgpiod
 sudo apt-get install -y python3-smbus python3-dev i2c-tools
 sudo pip3 install gpiod
 sudo pip3 install adafruit-blinka
